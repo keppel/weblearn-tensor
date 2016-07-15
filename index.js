@@ -1,6 +1,7 @@
 'use strict'
 const table = require('text-table')
 const _ = require('lodash')
+const old = require('old')
 
 function Tensor() {
   const args = Array.prototype.slice.call(arguments)
@@ -265,4 +266,4 @@ function sameValues(a, b) {
   return result
 }
 
-module.exports = Tensor
+module.exports = old(Tensor)
