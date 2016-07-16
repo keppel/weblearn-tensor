@@ -9,8 +9,7 @@
   "dependencies": {
     "lodash": "^4.13.1",
     "old": "^0.1.3",
-    "text-table": "^0.2.0",
-    "weblearn": "*"
+    "text-table": "^0.2.0"
   },
   "author": "Judd Keppel <kepzorz@gmail.com>",
   "license": "ISC"
