@@ -102,3 +102,13 @@ test('element-wise tensor multiplication (cmul)', t =>{
   t.deepEqual(x.values, [[6, 6], [6, 6]])
 })
 
+test('tensor views', t =>{
+  t.plan(1)
+  const x = Tensor([1, 2, 3, 4])
+  const y = x.view(2, 2)
+  t.equal(y.values[1][1], 4)
+  // todo: test that memory manipulation of original affects the view and vice versa
+})
+
+
+
