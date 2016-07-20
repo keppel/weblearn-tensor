@@ -94,4 +94,11 @@ test('in-place tanh', t =>{
   t.deepEqual(truncatedValues, [.24, .46, .76, -.96])
 })
 
+test('element-wise tensor multiplication (cmul)', t =>{
+  t.plan(1)
+  let x = Tensor(2, 2).fill(2)
+  let y = Tensor(4).fill(3)
+  x.cmul(y)
+  t.deepEqual(x.values, [[6, 6], [6, 6]])
+})
 
