@@ -82,8 +82,16 @@ test('in-place sigmoid', t =>{
   t.plan(1)
   const x = Tensor([.25, .5, 1, -2])
   x.sigmoid()
-  const truncatedValues = x.values.map(v => v.toFixed(2))
+  const truncatedValues = x.values.map(v => Number(v.toFixed(2)))
   t.deepEqual(truncatedValues, [.56, .62, .73, .12])
+})
+
+test('in-place tanh', t =>{
+  t.plan(1)
+  const x = Tensor([.25, .5, 1, -2])
+  x.tanh()
+  const truncatedValues = x.values.map(v => Number(v.toFixed(2)))
+  t.deepEqual(truncatedValues, [.24, .46, .76, -.96])
 })
 
 
